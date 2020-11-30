@@ -1,14 +1,31 @@
+:root {
+  --background-color: #aed9e0;
+  --containter-color: #faf3dd;
+  --timer-background-color: #faf3dd;
+  --header-background-color: #faf3dd;
+  --timer-color: #ffa69e;
+  --h1-color: #5e6472;
+  --input-color: #b8f2e6;
+  --input-focus-color: #ffa69e;
+  --container-border-color: #a1922e;
+
+  --color-1: #ffa69e;
+  --color-2: #faf3dd;
+  --color-3: #b8f2e6;
+  --color-4: #aed9e0;
+  --color-5: #5e6472;
+  --color-6: #a1922e;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #1e0555;
+  background: var(--background-color);
+  /* color: var(--h1-color); */
 }
 
 body,
@@ -16,32 +33,45 @@ body,
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-header {
-  color: #f0db4f;
-  font-size: 1.5rem;
+header h1 {
+  color: var(--h1-color);
+  font-size: 3rem;
   display: flex;
   justify-content: center;
-  /* position: absolute; */
-  background-color: aliceblue;
-  /* top: 2rem; */
-}
-
-.container {
-  margin: auto;
-  background-color: #f0db4f;
-  padding: 1rem;
   border-radius: 0.5rem;
-  width: 700px;
+  width: 500px;
   max-width: 90%;
+  margin: 1rem auto 1rem auto;
+  padding: 1rem;
+  /* -webkit-text-stroke: 1px white; */
 }
 
 .timer {
+  display: flex;
   text-align: center;
-  /* top: 10rem; */
+  justify-content: center;
   font-size: 3rem;
-  color: #f0db4f;
+  margin: 1rem auto;
+  color: var(--timer-color);
   font-weight: bold;
-  background-color: red;
+  background-color: var(--timer-background-color);
+  border-radius: 0.5rem;
+  width: 150px;
+  /* max-width: 90%; */
+  position: relative;
+  border: 3px solid var(--container-border-color);
+  -webkit-text-stroke: 1px var(--container-border-color);
+}
+
+.container {
+  background-color: var(--containter-color);
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  width: 700px;
+  max-width: 90%;
+  margin: auto;
+  border: 3px solid var(--container-border-color);
 }
 
 .quote-display {
@@ -52,20 +82,19 @@ header {
 
 .quote-input {
   display: flex;
-  background-color: transparent;
-  border: 2px solid #a1922e;
+  background-color: var(--input-color);
   outline: none;
   width: 100%;
   height: 8rem;
   margin: auto;
   resize: none;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border-radius: 0.5rem;
 }
 
 .quote-input:focus {
-  border-color: black;
+  border: 2px solid var(--input-focus-color);
 }
 
 .correct {
