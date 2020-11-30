@@ -3,7 +3,7 @@
 }
 
 body {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -16,7 +16,18 @@ body,
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+header {
+  color: #f0db4f;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  /* position: absolute; */
+  background-color: aliceblue;
+  /* top: 2rem; */
+}
+
 .container {
+  margin: auto;
   background-color: #f0db4f;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -25,11 +36,12 @@ body,
 }
 
 .timer {
-  position: absolute;
-  top: 2rem;
+  text-align: center;
+  /* top: 10rem; */
   font-size: 3rem;
   color: #f0db4f;
   font-weight: bold;
+  background-color: red;
 }
 
 .quote-display {
@@ -39,6 +51,7 @@ body,
 }
 
 .quote-input {
+  display: flex;
   background-color: transparent;
   border: 2px solid #a1922e;
   outline: none;
